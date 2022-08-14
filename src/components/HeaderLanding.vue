@@ -2,10 +2,17 @@
   <header class="header">
     <div class="container">
       <nav class="header__nav">
-        <a class="header__logo-link" href="">
+        <a
+          data-wow-duration="1s"
+          class="header__logo-link wow animated animate__fadeInTopLeft"
+          href=""
+        >
           <img class="header__logo-img" src="@/./assets/img/Logo.svg" alt=""
         /></a>
-        <button class="header__btn">
+        <button
+          data-wow-duration="1.25s"
+          class="header__btn wow animated animate__fadeInTopRight"
+        >
           Login
           <img
             class="header__btn-arrow"
@@ -19,7 +26,16 @@
 </template>
 
 <script>
-export default {};
+import { WOW } from "wowjs";
+export default {
+  data() {
+    return {
+      mounted() {
+        new WOW().init();
+      },
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">

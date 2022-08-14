@@ -2,20 +2,42 @@
   <div class="container">
     <div class="hero">
       <div class="hero__left">
-        <h1 class="hero__title">Мастер подбора кредитов</h1>
-        <p class="hero__desc">
+        <h1
+          data-wow-duration="1.60s"
+          class="hero__title wow animated animate__backInUp"
+        >
+          Мастер подбора кредитов
+        </h1>
+        <p
+          data-wow-duration="1.80s"
+          class="hero__desc wow animated animate__backInUp"
+        >
           Персональный подбор кредита на любые цели и отправка заявки в банк
         </p>
       </div>
       <div class="hero__right">
-        <img class="hero__img" src="@/./assets/img/hero/hero-img.png" alt="" />
+        <img
+          data-wow-duration="2s"
+          class="hero__img wow animated animate__backInUp"
+          src="@/./assets/img/hero/hero-img.png"
+          alt=""
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { WOW } from "wowjs";
+export default {
+  data() {
+    return {
+      mounted() {
+        new WOW().init();
+      },
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">

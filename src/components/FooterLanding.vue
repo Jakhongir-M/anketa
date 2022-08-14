@@ -3,22 +3,44 @@
     <div class="container">
       <div class="footer__box">
         <div class="footer__box-left">
-          <h3 class="box__left-title">О нас.</h3>
-          <p class="box__left-desc">
+          <h3
+            data-wow-duration="1s"
+            class="box__left-title wow animated animate__bounceInDown"
+          >
+            О нас.
+          </h3>
+          <p
+            data-wow-duration="3s"
+            class="box__left-desc wow animated animate__bounceInDown"
+          >
             Сервис «Мастер подбора кредита» осуществляет бесплатный поиск
             выгодных предложений с учетом кредитной истории заемщика.
           </p>
         </div>
         <div class="footer__box-right">
-          <h3 class="footer__right-title">Связь</h3>
+          <h3
+            data-wow-duration="1s"
+            class="footer__right-title wow animated animate__bounceInDown"
+          >
+            Связь
+          </h3>
           <ul class="footer__list">
-            <li class="footer__item">
+            <li
+              data-wow-duration="2s"
+              class="footer__item wow animated animate__bounceInDown"
+            >
               <a href="" class="footer__link">Адрес</a>
             </li>
-            <li class="footer__item">
+            <li
+              data-wow-duration="2.25s"
+              class="footer__item wow animated animate__bounceInDown"
+            >
               <a href="" class="footer__link">Контакные данные</a>
             </li>
-            <li class="footer__item">
+            <li
+              data-wow-duration="2.50s"
+              class="footer__item wow animated animate__bounceInDown"
+            >
               <a href="" class="footer__link">Подробнее</a>
             </li>
           </ul>
@@ -34,7 +56,16 @@
 </template>
 
 <script>
-export default {};
+import { WOW } from "wowjs";
+export default {
+  data() {
+    return {
+      mounted() {
+        new WOW().init();
+      },
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">

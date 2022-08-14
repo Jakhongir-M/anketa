@@ -1,12 +1,18 @@
 <template>
   <div class="HowWorking">
     <div class="container">
-      <h2 class="HowWorking__title">Как работает Сервис?</h2>
+      <h2
+        data-wow-duration="2.50s"
+        class="HowWorking__title wow animate__bounceInDown"
+      >
+        Как работает Сервис?
+      </h2>
       <div class="HowWorking__box">
         <div class="HowWorking__left">
           <div class="HowWorking__box-item">
             <img
-              class="HowWorking__box-img"
+              data-wow-duration="1s"
+              class="HowWorking__box-img wow animated animate__fadeInTopLeft"
               src="@/./assets/img/HowWorking/HowWorking-1.svg"
               alt=""
             />
@@ -17,7 +23,8 @@
           </div>
           <div class="HowWorking__box-item">
             <img
-              class="HowWorking__box-img"
+              data-wow-duration="1s"
+              class="HowWorking__box-img wow animated animate__fadeInTopLeft"
               src="@/./assets/img/HowWorking/HowWorking-2.svg"
               alt=""
             />
@@ -30,8 +37,9 @@
         <div class="HowWorking__right">
           <div class="HowWorking__box-item">
             <img
-              class="HowWorking__box-img"
-              src="@/./assets/img/HowWorking/HowWorking-3.svg"
+              data-wow-duration="1s"
+              class="HowWorking__box-img wow animate__fadeInTopLeft"
+              src="@/./assets/img/HowWorking/HowWorking-3.svg "
               alt=""
             />
             <p class="HowWorking__desc">
@@ -41,7 +49,8 @@
           </div>
           <div class="HowWorking__box-item">
             <img
-              class="HowWorking__box-img"
+              data-wow-duration="1s"
+              class="HowWorking__box-img wow animate__fadeInTopLeft"
               src="@/./assets/img/HowWorking/HowWorking-4.svg"
               alt=""
             />
@@ -57,7 +66,12 @@
 </template>
 
 <script>
-export default {};
+import { WOW } from "wowjs";
+export default {
+  mounted() {
+    new WOW().init();
+  },
+};
 </script>
 
 <style scoped lang="scss">

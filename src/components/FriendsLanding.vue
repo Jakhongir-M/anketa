@@ -3,19 +3,22 @@
     <div class="container">
       <div class="partner__box">
         <img
+          data-wow-duration="1.25s"
           src="@/./assets/img/Partner/partner-1.svg"
           alt=""
-          class="partner__img"
+          class="partner__img wow animated animate__backInUp"
         />
         <img
+          data-wow-duration="1.50s"
           src="@/./assets/img/Partner/partner-2.svg"
           alt=""
-          class="partner__img"
+          class="partner__img wow animated animate__backInUp"
         />
         <img
+          data-wow-duration="1.70s"
           src="@/assets/img/Partner/partner-3.svg"
           alt=""
-          class="partner__img"
+          class="partner__img wow animated animate__backInUp"
         />
       </div>
     </div>
@@ -23,7 +26,16 @@
 </template>
 
 <script>
-export default {};
+import { WOW } from "wowjs";
+export default {
+  data() {
+    return {
+      mounted() {
+        new WOW().init();
+      },
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">
