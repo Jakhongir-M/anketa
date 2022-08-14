@@ -3,7 +3,7 @@
     <div class="container">
       <h2
         data-wow-duration="2.50s"
-        class="HowWorking__title wow animate__bounceInDown"
+        class="HowWorking__title wow animate__backInUp"
       >
         Как работает Сервис?
       </h2>
